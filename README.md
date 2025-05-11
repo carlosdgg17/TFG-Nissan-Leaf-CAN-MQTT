@@ -17,7 +17,7 @@ El script principal de este proyecto es `CAN_FILTER.py`. Este archivo se encarga
 
 ## 📦 Requisitos del sistema
 
-Este código ha sido probado en una máquina virtual con **Ubuntu**. Para ejecutarlo correctamente, asegúrate de tener instaladas las siguientes dependencias:
+Este código ha sido probado en una máquina virtual con **Ubuntu**. Para ejecutarlo correctamente, es necesario asegurarse de tener instaladas las siguientes dependencias:
 
 ```bash
 sudo apt update
@@ -29,8 +29,8 @@ pip3 install python-can cantools paho-mqtt
 ## 🖥️ Configuración del broker MQTT
 
 Antes de ejecutar el script:
-- Debes haber configurado un broker Mosquitto, ya sea local o remoto.
-- En el archivo CAN_FILTER.py, localiza la línea donde se define la IP del broker y modifica la IP por la del servidor que estés usando. Por ejemplo:
+- Se debe haber configurado un broker Mosquitto, ya sea local o remoto.
+- En el archivo CAN_FILTER.py, se localiza la línea donde se define la IP del broker y se modifica la IP por la del servidor que se esté usando. Por ejemplo:
 ```bash
 MQTT_BROKER = "195.0.1.60"
 ```
