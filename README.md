@@ -51,6 +51,7 @@ Las señales extraídas y publicadas son un subconjunto predefinido en el diccio
 
 ## 🗂️ Archivo .dbc
 Dentro del repositorio se incluye una carpeta llamada dbc/ que contiene el archivo necesario para decodificar los mensajes CAN: dbc/Nissan_Leaf_AZE0.dbc
+
 ⚠️ IMPORTANTE:
 Si cambias la ubicación del archivo .dbc o si ejecutas el código desde un sistema operativo distinto (por ejemplo, Windows), asegúrate de modificar la ruta en el código dentro de CAN_FILTER.py, en la sección donde se carga el archivo:
 dbc_path = "dbc/Nissan_Leaf_AZE0.dbc"
