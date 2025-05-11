@@ -1,10 +1,10 @@
-# 📡 TFG - Adquisición y Publicación de Señales CAN vía MQTT (Nissan Leaf AZE0)
+# TFG - Adquisición y Publicación de Señales CAN vía MQTT (Nissan Leaf AZE0)
 
 Este repositorio contiene el código Python desarrollado en el marco de un Trabajo Fin de Grado para la lectura, decodificación y publicación de señales CAN específicas del vehículo **Nissan Leaf AZE0**. Las señales capturadas son filtradas y enviadas mediante el protocolo **MQTT** a un broker remoto previamente configurado.
 
 ---
 
-## 🚀 Ejecución del script principal
+## Ejecución del script principal
 
 El script principal de este proyecto es `CAN_FILTER.py`. Este archivo se encarga de:
 
@@ -15,7 +15,7 @@ El script principal de este proyecto es `CAN_FILTER.py`. Este archivo se encarga
 
 ---
 
-## 📦 Requisitos del sistema
+## Requisitos del sistema
 
 Este código ha sido probado en una máquina virtual con **Ubuntu**. Para ejecutarlo correctamente, es necesario asegurarse de tener instaladas las siguientes dependencias:
 
@@ -26,7 +26,7 @@ pip3 install python-can cantools paho-mqtt
 ```
 ---
 
-## 🖥️ Configuración del broker MQTT
+## Configuración del broker MQTT
 
 Antes de ejecutar el script:
 - Se debe haber configurado un broker Mosquitto, ya sea local o remoto.
@@ -36,7 +36,7 @@ MQTT_BROKER = "195.0.1.60"
 ```
 ---
 
-## 🚗 Señales compatibles
+## Señales compatibles
 Este script está diseñado específicamente para el Nissan Leaf AZE0 (2014).
 Las señales extraídas y publicadas son un subconjunto predefinido en el diccionario SENIALES_PERMITIDAS, que incluye valores como:
 - Velocidad de las ruedas.
@@ -49,7 +49,7 @@ Las señales extraídas y publicadas son un subconjunto predefinido en el diccio
 
 ---
 
-## 🗂️ Archivo .dbc
+## Archivo .dbc
 Dentro del repositorio se incluye una carpeta llamada dbc/ que contiene el archivo necesario para decodificar los mensajes CAN: dbc/Nissan_Leaf_AZE0.dbc
 
 ⚠️ IMPORTANTE:
@@ -59,7 +59,7 @@ dbc_path = "dbc/Nissan_Leaf_AZE0.dbc"
 
 ---
 
-## ▶️ Ejecución
+## Ejecución
 Una vez configurado todo, puedes ejecutar el script con:
 ```bash
 python3 CAN_FILTER.py
