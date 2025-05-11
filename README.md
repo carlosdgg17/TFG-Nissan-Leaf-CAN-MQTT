@@ -31,4 +31,34 @@ pip3 install python-can cantools paho-mqtt
 Antes de ejecutar el script:
 - Debes haber configurado un broker Mosquitto, ya sea local o remoto.
 - En el archivo CAN_FILTER.py, localiza la línea donde se define la IP del broker y modifica la IP por la del servidor que estés usando. Por ejemplo:
+```bash
 MQTT_BROKER = "195.0.1.60"
+```
+---
+
+## 🚗 Señales compatibles
+Este script está diseñado específicamente para el Nissan Leaf AZE0 (2014).
+Las señales extraídas y publicadas son un subconjunto predefinido en el diccionario SENIALES_PERMITIDAS, que incluye valores como:
+- Velocidad de las ruedas.
+- Temperatura del paquete de baterías.
+- Posición del acelerador.
+- Presiones de freno.
+- Fuerza de frenado.
+- Código de diagnóstico (DTC).
+
+---
+
+## 🗂️ Archivo .dbc
+Dentro del repositorio se incluye una carpeta llamada dbc/ que contiene el archivo necesario para decodificar los mensajes CAN:
+📁 dbc/
+ └── Nissan_Leaf_AZE0.dbc
+⚠️ IMPORTANTE:
+Si cambias la ubicación del archivo .dbc o si ejecutas el código desde un sistema operativo distinto (por ejemplo, Windows), asegúrate de modificar la ruta en el código dentro de CAN_FILTER.py, en la sección donde se carga el archivo:
+dbc_path = "dbc/Nissan_Leaf_AZE0.dbc"
+---
+
+## ▶️ Ejecución
+Una vez configurado todo, puedes ejecutar el script con:
+```bash
+python3 CAN_FILTER.py
+```
